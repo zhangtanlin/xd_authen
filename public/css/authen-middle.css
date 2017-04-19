@@ -1,0 +1,115 @@
+@media (min-width: 768px){
+    /*宽度分割*/
+    .xd_row {*zoom: 1;width: 100%;}
+    .xd_row:after {content: "";display: block;height: 0;visibility:hidden;clear: both;}
+    .xd_1,.xd_2,.xd_3,.xd_4,.xd_5,.xd_6,.xd_7,.xd_8,.xd_9,.xd_10{position: relative;min-height: 1px;float: left;}
+    .xd_1 {min-width: 10%;}
+    .xd_2 {min-width: 20%;}
+    .xd_3 {min-width: 30%;}
+    .xd_4 {min-width: 40%;}
+    .xd_5 {min-width: 50%;}
+    .xd_6 {min-width: 60%;}
+    .xd_7 {min-width: 70%;}
+    .xd_8 {min-width: 80%;}
+    .xd_9 {min-width: 90%;}
+    .xd_10 {min-width: 100%;}
+    .xd_offset_1 {margin-left: 10%;}
+    .xd_offset_2 {margin-left: 20%;}
+    .xd_offset_3 {margin-left: 30%;}
+    .xd_offset_4 {margin-left: 40%;}
+    .xd_offset_5 {margin-left: 50%;}
+    .xd_offset_6 {margin-left: 60%;}
+    .xd_offset_7 {margin-left: 70%;}
+    .xd_offset_8 {margin-left: 80%;}
+    .xd_offset_9 {margin-left: 90%;}
+    /*【管理中心】头*/
+    #admin_header{width:100%;min-width: 1250px;height: 60px;line-height: 60px;background: #bb2820;}
+    #admin_headerL{float: left;height: 60px;}
+    #admin_headerL img{padding: 5px;}
+    #admin_headerR{float:right;color: cornsilk;}
+    #admin_headerR>ul>li{float: left;position: relative;padding: 0 10px}
+    #admin_headerR>ul>.admin_headerOperation>a{color: cornsilk;}
+    #admin_headerR>ul>.admin_headerOperation>a:hover{color: wheat;cursor: pointer}
+    #admin_headerR>ul>.admin_headerDropBox{padding: 0;cursor: pointer;position: relative;width: 165px;}
+    #admin_headerR>ul>.admin_headerDropBox:hover{color:#bb2820;background: cornsilk;}
+    #admin_headerR>ul>.admin_headerDropBox>p{height: 60px;line-height: 60px;}
+    #admin_headerR>ul>.admin_headerDropBox>.active{cursor:pointer;background: cornsilk;color: #bb2820;}
+    #admin_headerR>ul>.admin_headerDropBox>p>.iconfont{padding: 0 10px}
+    #admin_headerR>ul>.admin_headerDropBox>p>span{float: left}
+    #admin_headerUser{
+        width: 100px;
+        height: 60px;
+        line-height: 60px;
+        display: inline-block;
+        white-space: nowrap;                       /*强制文本在一行内显示*/
+        text-overflow: ellipsis;                   /*溢出省略号，支持ie、safari（webkit）*/
+        -o-text-overflow: ellipsis;                /*溢出省略号，支持opera*/
+        overflow: hidden;                          /*溢出隐藏*/
+    }
+    .admin_headerDropList{display: none;position: absolute;top:60px;left:0;z-index:99;width: 165px;}
+    .admin_headerDropList>li{line-height: 40px;background: cornsilk;}
+    .admin_headerDropList>li:hover{background: wheat;cursor: pointer;}
+    .admin_headerDropList>li>a{padding: 0 10px;color: #bb2820}
+    /*【管理中心】中部*/
+    #admin_center{*zoom: 1;min-width: 1250px;width: 100%;}
+    #admin_center:after {content: '\20';display: block;height: 0;clear: both;}
+    #admin_nav,#admin_content{float: left}
+    #admin_nav{width: 249px;border-right: 1px solid #ddd;background: #f7f7f7;}
+    #admin_nav .xd_panelHead{border-bottom: 1px solid #ddd;}
+    #admin_nav .xd_panelBody{background: #e6e6e6;}
+    #admin_nav .xd_panelBody a{display: block;padding: 15px 30px;
+        color:#000;border-left: 3px solid #e6e6e6;border-bottom: 1px solid #f7f7f7;}
+    #admin_nav .xd_panelBody a:hover{color: #bb2820;border-left: 3px solid #bb2820;}
+    #admin_nav .xd_panelBody .active{color: #bb2820;border-left: 3px solid #bb2820;}
+    #admin_content{min-width: 1000px;width: 100%;}
+    #admin_contentBox{padding: 0 20px;font-size: 16px;}
+    #admin_contentBox .xd_row{border-bottom: 1px solid #ddd;}
+    #admin_contentBox .xd_row>div{padding: 20px 0;}
+    /*【管理中心】账户管理*/
+    #admin_indexRest{font-size: 40px;display: inline-block;position: relative;top: 10px;margin-right: 10px;}
+    #admin_indexManage{padding: 0!important;}
+    #admin_indexManage>div{border-left: 1px solid #ddd;padding: 20px 0 20px 20px;}
+    #admin_indexManage p{margin: 10px 0;}
+    #admin_indexJustAuthenBtn{color: dodgerblue;}
+    #admin_indexJustAuthenBtn:hover{color: royalblue;cursor: pointer;}
+    #admin_indexRealNameModal .modalBox{width: 400px;height: 240px;overflow: hidden;}
+    #admin_indexChangeWarnModal .modalBox{width: 400px;height: 220px;overflow: hidden;}
+    #admin_indexChangeWarn{color: dodgerblue;}
+    #admin_indexChangeWarn:hover{color: royalblue;cursor: pointer;}
+    #admin_indexWarnPhone{color: dodgerblue;}
+    #admin_indexPopover{position:relative;top:2px;left:2px;border: 1px solid dodgerblue;font-size: 12px;color: #999;
+        -moz-border-radius: 5px;-webkit-border-radius:5px;border-radius: 5px;padding: 10px;}
+    .admin_indexPopoverTriangle {color: dodgerblue;position: absolute;top:7px;left:-9px;}
+    /*【管理中心】充值记录*/
+    #admin_pTremainder:after {content: "";display: block;height: 0;clear: both;}
+    #admin_pTremainder{*zoom: 1;}
+    #admin_pTremainder>div{float: left;}
+    #admin_pTremainderIcon{font-size: 100px;color: orange;}
+    #admin_pTremainderText{margin-top: 35px;}
+    #admin_pTremainderNumber{font-size: 40px;color: orange;font-weight: bolder;
+        font-family: "Microsoft Yahei","Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial,
+        "WenQuanYi Micro Hei", Verdana, sans-serif, "\5B8B\4F53";}
+    #admin_pTtable td:nth-child(1){width: 100px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*【管理中心】尾*/
+    #admin_footer{width:100%;min-width:1250px;height: 70px;text-align: center;color: #999;background: #222;position: relative;}
+}
