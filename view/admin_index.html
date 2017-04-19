@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="关键字,关键字,关键字"/>
+    <meta name="description" content="页面描述不超过150个字符"/>
+    <meta name="Author" content="页面作者"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>管理中心</title>
+    <link rel="shortcut icon" href="../public/images/icoLogo.ico"/>
+    <link rel="stylesheet" href="../public/css/authen.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../public/css/authen-middle.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../public/css/authen-small.css">
+    <link rel="stylesheet" href="../public/lib/jquery-ui/themes/smoothness/jquery-ui.min.css">
+    <script src="../public/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../public/js/authenWay.js"></script>
+    <script src="../public/js/authenDom.js"></script>
+    <script src="../public/lib/jquery-ui/ui/widgets/datepicker.js"></script>
+    <script src="../public/lib/jquery-ui/ui/i18n/datepicker-zh-CN.js"></script>
+</head>
+<body>
+<!--头-->
+<header id="admin_header" class="clear">
+    <div id="admin_headerL"><a href=""><img src="../public/images/adminLogo.png" alt="logo"/></a></div>
+    <div id="admin_headerR">
+        <ul>
+            <li class="admin_headerStateBtn"><a href="" class="btn btn_sm btn_cornsilk">未实名认证</a></li>
+            <li class="admin_headerDropBox">
+                <p>
+                    <span class="iconfont">&#xe634;</span>
+                    <span id="admin_headerUser">sdfsfadfadfasdfasdfasdfasdfasdfasdfasdf</span>
+                    <span class="iconfont">&#xe639;</span>
+                </p>
+                <ol class="admin_headerDropList">
+                    <li><a href="">用户资料</a></li>
+                    <li><a href="">密码修改</a></li>
+                    <li><a href="">退出登录</a></li>
+                </ol>
+            </li>
+            <li class="admin_headerOperation"><a href="">退出</a></li>
+            <li>|</li>
+            <li class="admin_headerOperation"><a href="">帮助</a></li>
+        </ul>
+    </div>
+</header>
+
+<!--中部-->
+<div id="admin_center">
+    <!--导航-->
+    <div id="admin_nav" class="xd_panelBox">
+        <div class="xd_panel active">
+            <div class="xd_panelHead">
+                <span class="xd_panelHeadTitle">用户中心</span>
+                <span class="xd_panelHeadIcon iconfont">&#xe644;</span>
+            </div>
+            <div class="xd_panelBody active">
+                <a href="" class="active">账户管理</a>
+                <a href="">用户资料</a>
+                <a href="">安全设置</a>
+            </div>
+        </div>
+        <div class="xd_panel">
+            <div class="xd_panelHead">
+                <span class="xd_panelHeadTitle">产品中心</span>
+                <span class="xd_panelHeadIcon iconfont">&#xe644;</span>
+            </div>
+            <div class="xd_panelBody">
+                <a href="">公民身份证</a>
+                <a href="">银行卡三四要素</a>
+                <a href="">运营商认证</a>
+                <a href="">企业工商信息查询</a>
+                <a href="">学历查询</a>
+                <a href="">驾驶证核验</a>
+                <a href="">车牌号查询</a>
+                <a href="">短信发送</a>
+            </div>
+        </div>
+        <div class="xd_panel">
+            <div class="xd_panelHead">
+                <span class="xd_panelHeadTitle">开发者中心</span>
+                <span class="xd_panelHeadIcon iconfont">&#xe644;</span>
+            </div>
+            <div class="xd_panelBody">
+                <a href="">接入管理</a>
+                <a href="">IP白名单</a>
+            </div>
+        </div>
+    </div>
+    <!--内容-->
+    <div id="admin_content">
+        <div id="admin_contentBox">
+            <div class="xd_row">
+                <div class="xd_10">账户管理</div>
+            </div>
+            <div class="xd_row f14">
+                <div class="xd_5">
+                    <p>账户余额(元)&nbsp;&nbsp;<a href="admin_rechargeRecord.html" class="text_dodgerblue">查询充值记录</a></p>
+                    <span id="admin_indexRest">0.00</span><a href="admin_payType.html" class="btn btn_darkGoldenRod">充值</a>
+                </div>
+                <div class="xd_5" id="admin_indexManage">
+                    <div>
+                        <p>账户状态：
+                            <span class="text_forestgreen">正常</span></p>
+                        <p>认证级别：
+                            <a href="" class="text_dodgerblue">立即认证</a>
+                            <span id="admin_indexJustAuthenBtn" class="iconfont">&#xe635;</span>
+                        <span id="admin_indexPopover" class="disN">
+                            <span class="admin_indexPopoverTriangle iconfont">&#xe63a;</span>
+                            经过实名认证的用户才可使用本平台的接口服务
+                        </span>
+                        </p>
+                        <p>手机绑定：
+                            <span>未绑定<a href="" class="text_dodgerblue">&nbsp;&nbsp;绑定手机<span></span></a></span>
+                        </p>
+                        <p>余额预警：
+                            <span>200.00元<span id="admin_indexChangeWarn" data-modal="admin_indexChangeWarnModal">&nbsp;&nbsp;修改预警值</span></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="xd_row">
+                <div class="xd_10">账单明细</div>
+            </div>
+            <div class="xd_row">
+                <div class="xd_10">
+                    <!--查询-->
+                    <form action="" class="form">
+                        <input type="text" class="input" id="admin_indexBillDatetime" placeholder="请选择月份">
+                        <button type="submit" class="btn btn_white"><span class="iconfont">&#xe636;</span>&nbsp;账单下载</button>
+                    </form>
+                    <!--表格-->
+                    <table id="admin_indexBillDetails" class="table tableBolder tableHover">
+                        <thead>
+                        <tr>
+                            <th>计费项目</th>
+                            <th>使用量</th>
+                            <th>描述说明</th>
+                            <th>金额(元)</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>公民身份认证</td>
+                            <td>5000</td>
+                            <td>消费</td>
+                            <td>2500.00</td>
+                            <td align="center"><a href="" class="text_dodgerblue">下载明细</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!--分页-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--验证是否实名认证-->
+<div class="modal" id="admin_indexRealNameModal">
+    <form action="" class="form">
+        <div class="modalHead">
+            <p class="modalHeadText">修改预警值</p>
+            <p class="modalHeadIcon iconfont" data-modal="admin_indexRealNameModal">&#xe649;</p>
+        </div>
+        <div class="modalBody text_center">
+            <p>亲爱的用户，您还未进行实名认证！</p>
+            <p class="f12">无法使用认证服务产品</p>
+            <div class="xd_row">
+                <div class="xd_10">
+                    <a href="" class="btn btn_bb2820">立即认证</a>
+                    <a href="" class="modalBodyCancel btn btn_white modal_closeBtn">取消</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="modalFoot">
+            <span class="text_orange">注意：为了避免提醒不能及时送达，请确保手机号的正确性。</span>
+        </div>
+    </form>
+</div>
+
+<!--修改预警值摸态框-->
+<div class="modal" id="admin_indexChangeWarnModal">
+    <form action="" class="form" name="">
+        <div class="modalHead">
+            <p class="modalHeadText">修改预警值</p>
+            <p class="modalHeadClose iconfont">&#xe649;</p>
+        </div>
+        <div class="modalBody">
+            <div class="xd_row">
+                <div class="xd_4 text_right"><span class="padLR10">设置预警值:</span></div>
+                <div class="xd_6">
+                    <select id="admin_indexWarnSel" title="">
+                        <option value="200.00">200.00</option>
+                        <option value="500.00">500.00</option>
+                        <option value="1000.00">1000.00</option>
+                        <option value="5000.00">5000.00</option>
+                        <option value="10000.00">10000.00</option>
+                        <option value="20000.00">20000.00</option>
+                        <option value="50000.00">50000.00</option>
+                    </select>
+                </div>
+            </div>
+            <div class="xd_row">
+                <div class="xd_4 text_right"><span class="padLR10">接收提醒手机:</span></div>
+                <div class="xd_6">
+                    <span id="admin_indexWarnPhone">13561804273</span>
+                </div>
+            </div>
+            <div class="xd_row">
+                <div class="xd_offset_4 xd_6">
+                    <button type="button" class="modalBodyClose btn btn_bb2820">提交</button>
+                </div>
+            </div>
+        </div>
+        <div class="modalFoot">
+            <span class="text_orange">注意：为了避免提醒不能及时送达，请确保手机号的正确性。</span>
+        </div>
+    </form>
+</div>
+
+<!--实名认证提醒-->
+<div class="modal" id="admin_indexTrueAuthenModal">
+    <form action="" class="form">
+        <div class="modalHead">
+            <p class="modalHeadText">修改预警值</p>
+            <p class="modalHeadClose iconfont">&#xe649;</p>
+        </div>
+        <div class="modalBody">
+            <div class="xd_row">
+                <div class="xd_4 text_right"><span class="padLR10">设置预警值:</span></div>
+                <div class="xd_6">
+                    我是文字
+                </div>
+            </div>
+            <div class="xd_row">
+                <div class="xd_4 text_right"><span class="padLR10">接收提醒手机:</span></div>
+                <div class="xd_6">
+                    <span>13561804273</span>
+                </div>
+            </div>
+            <div class="xd_row">
+                <div class="xd_offset_4 xd_6">
+                    <button type="button" class="modalBodyClose btn btn_bb2820">提交</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<!--底部-->
+<footer id="admin_footer">
+    <span>现代金控&nbsp;|&nbsp;现代支付<br>&#169; 2015-2017&nbsp;现代金融控股(成都)有限公司&nbsp;版权所有&nbsp;蜀ICP备10205371号-1</span>
+</footer>
+
+<script>
+    $(function(){
+        var state=true;
+        if(state){
+            /*【账户管理】实名认证提示框-默认展示*/
+            $("#admin_indexTrueAuthenModal").modal("show");
+        }
+    })
+</script>
+</body>
+</html>
