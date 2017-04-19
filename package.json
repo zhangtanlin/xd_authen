@@ -1,0 +1,24 @@
+{
+  "name": "xd_authen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhangxiaolin",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "description": "利用less、jquery（2.0-）重新架构的",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangtanlin/xd_authen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhangtanlin/xd_authen/issues"
+  },
+  "homepage": "https://github.com/zhangtanlin/xd_authen#readme"
+}

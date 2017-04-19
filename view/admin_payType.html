@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="关键字,关键字,关键字"/>
+    <meta name="description" content="页面描述不超过150个字符"/>
+    <meta name="Author" content="页面作者"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>账户充值</title>
+    <link rel="shortcut icon" href="../public/images/icoLogo.ico"/>
+    <link rel="stylesheet" href="../public/css/authen.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="../public/css/authen-middle.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../public/css/authen-small.css">
+    <link rel="stylesheet" href="../public/lib/jquery-ui/themes/smoothness/jquery-ui.min.css">
+    <script src="../public/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../public/js/authenWay.js"></script>
+    <script src="../public/js/authenDom.js"></script>
+</head>
+<body>
+<!--头-->
+<header id="admin_header" class="clear">
+    <div id="admin_headerL"><a href=""><img src="../public/images/adminLogo.png" alt="logo"/></a></div>
+    <div id="admin_headerR">
+        <ul>
+            <li class="admin_headerStateBtn"><a href="" class="btn btn_sm btn_cornsilk">未实名认证</a></li>
+            <li class="admin_headerDropBox">
+                <p>
+                    <span class="iconfont">&#xe634;</span>
+                    <span id="admin_headerUser">sdfsfadfadfasdfasdfasdfasdfasdfasdfasdf</span>
+                    <span class="iconfont">&#xe639;</span>
+                </p>
+                <ol class="admin_headerDropList">
+                    <li><a href="">用户资料</a></li>
+                    <li><a href="">密码修改</a></li>
+                    <li><a href="">退出登录</a></li>
+                </ol>
+            </li>
+            <li class="admin_headerOperation"><a href="">退出</a></li>
+            <li>|</li>
+            <li class="admin_headerOperation"><a href="">帮助</a></li>
+        </ul>
+    </div>
+</header>
+
+<!--中部-->
+<div id="admin_center">
+    <!--导航-->
+    <div id="admin_nav" class="xd_panelBox">
+        <div class="xd_panel active">
+            <div class="xd_panelHead">
+                <span class="xd_panelHeadTitle">用户中心</span>
+                <span class="xd_panelHeadIcon iconfont">&#xe644;</span>
+            </div>
+            <div class="xd_panelBody active">
+                <a href="admin_index.html" class="active">账户管理</a>
+                <a href="">用户资料</a>
+                <a href="">安全设置</a>
+            </div>
+        </div>
+        <div class="xd_panel">
+            <div class="xd_panelHead">
+                <span class="xd_panelHeadTitle">产品中心</span>
+                <span class="xd_panelHeadIcon iconfont">&#xe644;</span>
+            </div>
+            <div class="xd_panelBody">
+                <a href="">公民身份证</a>
+                <a href="">银行卡三四要素</a>
+                <a href="">运营商认证</a>
+                <a href="">企业工商信息查询</a>
+                <a href="">学历查询</a>
+                <a href="">驾驶证核验</a>
+                <a href="">车牌号查询</a>
+                <a href="">短信发送</a>
+            </div>
+        </div>
+        <div class="xd_panel">
+            <div class="xd_panelHead">
+                <span class="xd_panelHeadTitle">开发者中心</span>
+                <span class="xd_panelHeadIcon iconfont">&#xe644;</span>
+            </div>
+            <div class="xd_panelBody">
+                <a href="">接入管理</a>
+                <a href="">IP白名单</a>
+            </div>
+        </div>
+    </div>
+    <!--内容-->
+    <div id="admin_content">
+        <div id="admin_contentBox">
+            <div class="xd_row">
+                <div class="xd_10">账户充值</div>
+            </div>
+            <div class="xd_row">
+                <div class="xd_10">
+                    <form action="" class="form">
+                        <div id="admin_pTremainder">
+                            <div id="admin_pTremainderIcon" class="floatL iconfont" style="font-size: 100px;">&#xe63d;</div>
+                            <div id="admin_pTremainderText" class="floatL">
+                                <p>&nbsp;&nbsp;当前余额(元)</p>
+                                <p id="admin_pTremainderNumber">￥<span>0.00</span></p>
+                            </div>
+                        </div>
+                        <table id="admin_pTtable" class="table">
+                            <tr>
+                                <td>充值金额&nbsp;</td>
+                                <td><input type="text" placeholder="0.00">&nbsp;元</td>
+                            </tr>
+                            <tr>
+                                <td>付款方式&nbsp;</td>
+                                <td>
+                                    <span class="btn btn_white">在线支付</span>
+                                    <span class="btn btn_white">在线支付</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>充值说明&nbsp;</td>
+                                <td class="f12 text_darkgray">在线充值方式金额实时到账，银行转账需要工作人员查验通过后才会向您的账户加款。</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
