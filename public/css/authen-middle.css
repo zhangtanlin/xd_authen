@@ -51,7 +51,7 @@
     .admin_headerDropList>li:hover{background: wheat;cursor: pointer;}
     .admin_headerDropList>li>a{padding: 0 10px;color: #bb2820}
     /*【管理中心】中部*/
-    #admin_center{*zoom: 1;min-width: 1250px;width: 100%;}
+    #admin_center{*zoom: 1;min-width:1250px;width:100%;overflow: hidden;}
     #admin_center:after {content: '\20';display: block;height: 0;clear: both;}
     #admin_nav,#admin_content{float: left}
     #admin_nav{width: 249px;border-right: 1px solid #ddd;background: #f7f7f7;}
@@ -61,7 +61,7 @@
         color:#000;border-left: 3px solid #e6e6e6;border-bottom: 1px solid #f7f7f7;}
     #admin_nav .xd_panelBody a:hover{color: #bb2820;border-left: 3px solid #bb2820;}
     #admin_nav .xd_panelBody .active{color: #bb2820;border-left: 3px solid #bb2820;}
-    #admin_content{min-width: 1000px;width: 100%;}
+    #admin_content{min-width: 1000px;}
     #admin_contentBox{padding: 0 20px;font-size: 16px;}
     #admin_contentBox .xd_row{border-bottom: 1px solid #ddd;}
     #admin_contentBox .xd_row>div{padding: 20px 0;}
