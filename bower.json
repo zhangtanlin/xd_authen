@@ -14,6 +14,6 @@
   ],
   "dependencies": {
     "jquery": "1",
-    "jquery-ui": "^1.12.1"
+    "jeDate": "git://github.com/singod/jeDate.git#jeDate3.8"
   }
 }
