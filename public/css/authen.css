@@ -35,8 +35,7 @@ table { border-collapse: collapse; border-spacing: 0; }
     url('../fonts/iconfont.svg?t=1481596456764#iconfont') format('svg'); /* iOS 4.1- */
 }
 .iconfont {
-    font-style:normal;
-    font-weight: lighter;
+    font: normal normal lighter medium/normal iconfont;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
